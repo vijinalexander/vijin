@@ -1,0 +1,7 @@
+fun1online flower shop
+customer->id,name,address,phone number,email
+flower  ->id,name,colour,function,model,quantity,Isavailable
+Inventroy->InvNumber,collection, SupplierId, Quantity,UnitPrice, Date
+sales   ->customer id,total amount,date
+payment ->payment mode,discount,tax
+
