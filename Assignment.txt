@@ -1,0 +1,38 @@
+select * from titles
+--Select the author firtname and last name
+select au_fname as "first name" ,au_lname as "last name" from authors
+
+--Sort the titles by the title name in descending order and print all teh details
+select title as "title name" from titles
+order by title -- assending order
+order by title desc--desending order
+
+----print the author name and title name
+select title from titles where title select au_fname from authors ------------------
+
+--Print the number of titlespublished by every author
+select au_id,count(title_id) from titleauthor
+where au_id in(select au_id from authors where au_fname in (select au_fname from authors))
+group by au_id-------------------
+
+
+
+--print the publisher name and the average advance for every publisher
+select pub_id,avg(advance) as 'average advance for every publisher' from titles where pub_id in 
+(select pub_id from publishers where pub_name in(select pub_name from publishers))
+group by pub_id--------------
+
+
+--print the publishername, author name, title name and the sale amount(qty
+ select select pub_id from publishers where pub_name in (select pub_name from publishers)
+group by pub_name--------
+
+
+7) print the price of all that titles that have name that ends with s
+
+select price as 'Book_Price' from titles where title like '_s%'
+
+--print the title names that contain 'and' in it
+
+select title as' title names that contain "and"' from titles where title like and%---------
+
